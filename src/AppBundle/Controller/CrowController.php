@@ -14,7 +14,7 @@ class CrowController extends Controller
     {
         $number = random_int(0, 100);
 
-        return $this->render('lucky/number.html.twig', array(
+        return $this->render('crow/homePage.html.twig', array(
             'number' => $number,
         ));
     }

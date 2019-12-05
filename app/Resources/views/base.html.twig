@@ -1,13 +1,137 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Crowdfunding</title>
+		{% block stylesheets %}{% endblock %}
+		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+
+		<link rel="shortcut icon" href="{{asset('assets/images/gt_favicon.png')}}">
+
+		<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+		<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+		<link
+		rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
+
+		<!-- Custom styles for our template -->
+		<link rel="stylesheet" href="{{asset('assets/css/bootstrap-theme.css')}}" media="screen">
+		<link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+	</head>
+	<body class="home"> {% block body %}{% endblock %}
+		{% block navbar %}
+			<div class="navbar navbar-inverse navbar-fixed-top headroom">
+				<div class="container">
+					<div
+						class="navbar-header">
+						<!-- Button for smallest screens -->
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">Crowdfunding</a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav pull-right">
+							<li class="active">
+								<a href="#">Acceuil</a>
+							</li>
+							<li>
+								<a href="about.html">A propos de nous</a>
+							</li>
+						</ul>
+					</div>
+					<!--/.nav-collapse -->
+				</div>
+			</div>
+		{% endblock %}
+		{% block header_page %}
+			<!-- Header -->
+			<header id="head">
+				<div class="container">
+					<div class="row">
+						<h1 class="lead">Collecte de don</h1>
+						<p class="tagline">Pour la réalisation du projet de réfection du Pont de l'enfance à Sa'a</p>
+					</div>
+				</div>
+			</header>
+			<!-- /Header -->
+		{% endblock %}
+		{% block container_page %}{% endblock %}
+		{% block footer %}
+			<footer id="footer" class="top-space">
+
+				<div class="footer1">
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-3 widget">
+								<h3 class="widget-title">Contact</h3>
+								<div class="widget-body">
+									<p>+237 697 94 32 93<br>
+										<a href="mailto:#">landrywabo8@gmail.com</a><br>
+										<br>
+										Yaoundé Cameroun
+									</p>
+								</div>
+							</div>
+
+							<div class="col-md-3 widget">
+								<h3 class="widget-title">Nous suivre</h3>
+								<div class="widget-body">
+									<p class="follow-me-icons">
+										<a href="">
+											<i class="fa fa-twitter fa-2"></i>
+										</a>
+										<a href="">
+											<i class="fa fa-dribbble fa-2"></i>
+										</a>
+									</p>
+								</div>
+							</div>
+
+							<div class="col-md-6 widget">
+								<h3 class="widget-title">Appel</h3>
+								<div class="widget-body">
+									<p>Contribuons au developpement de notre pays pour un lendemain meilleur !!!</p>
+									<p></p>
+								</div>
+							</div>
+
+						</div>
+						<!-- /row of widgets -->
+					</div>
+				</div>
+
+				<div class="footer2">
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-6 widget">
+								<div class="widget-body">
+									<p class="simplenav">
+										<a href="#">Acceuil</a>
+										<a href="about.html">A propos de nous</a>
+									</p>
+								</div>
+							</div>
+
+							<div class="col-md-6 widget">
+								<div class="widget-body">
+									<p class="text-right">
+										Copyright &copy; 2019, Landry WABO
+									</p>
+								</div>
+							</div>
+
+						</div>
+						<!-- /row of widgets -->
+					</div>
+				</div>
+
+			</footer>
+		{% endblock %}
+		{% block javascripts %}{% endblock %}
+	</body>
 </html>
+
