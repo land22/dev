@@ -5,12 +5,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class LuckyController extends Controller
+class CrowController extends Controller
 {
     /**
-     * @Route("/lucky/number")
+     * @Route("/", name="Homepage")
      */
-    public function numberAction()
+    public function indexAction()
     {
         $number = random_int(0, 100);
 
